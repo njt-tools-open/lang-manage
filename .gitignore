@@ -1,0 +1,11 @@
+node_modules
+packages/*/node_modules
+
+# cache
+.eslintcache
+
+/lang-cli/static
+
+# bundle files
+bin
+dist

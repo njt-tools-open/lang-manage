@@ -1,0 +1,8 @@
+.section-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 800px;
+  margin: 0 auto;
+}

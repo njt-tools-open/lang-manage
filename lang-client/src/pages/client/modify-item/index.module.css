@@ -1,0 +1,30 @@
+.modify-item {
+  width: 48%;
+}
+
+.update-item {
+  display: flex;
+  justify-content: space-between;
+  height: 36px;
+  line-height: 36px;
+}
+
+.update-item-input {
+  height: 32px;
+  width: 240px;
+  padding: 0 4px;
+}
+
+.delete-wrapper {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border-radius: 50%;
+}
+
+.delete-inset {
+  width: 70%;
+  height: 70%;
+  margin: 15%;
+  border-radius: 50%;
+}

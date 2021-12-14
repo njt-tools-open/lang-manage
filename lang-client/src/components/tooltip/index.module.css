@@ -1,0 +1,15 @@
+.tooltip {
+  right: 30px;
+  bottom: 30px;
+}
+
+.icon-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.icon {
+  font-size: 20px;
+}

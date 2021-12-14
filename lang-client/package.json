@@ -1,0 +1,29 @@
+{
+  "name": "@xv-town/lang-client",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "css": "tailwindcss -i ./src/assets/css/tw.css -o ./public/tw.css",
+    "css:w": "tailwindcss -i ./src/assets/css/tw.css -o ./public/tw.css --watch"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.1",
+    "postcss": "^8.4.5",
+    "tailwindcss": "2.2.19",
+    "typescript": "^4.4.3",
+    "vite": "^2.5.7",
+    "vite-plugin-solid": "^2.0.3"
+  },
+  "dependencies": {
+    "@antv/g2": "^4.1.37",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "solid-app-router": "^0.1.14",
+    "solid-js": "^1.1.3"
+  }
+}
