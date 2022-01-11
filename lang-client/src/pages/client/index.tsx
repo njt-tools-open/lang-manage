@@ -10,6 +10,7 @@ import {
 import { createStore } from 'solid-js/store';
 import { useNavigate, useParams } from 'solid-app-router';
 import classnames from 'classnames';
+import { useI18n } from 'solid-i18n';
 import { reqGetProjectById, reqSaveProjectById } from '../../apis';
 import Completion from './completion';
 import ModifyItem from './modify-item';
@@ -72,6 +73,7 @@ const modifyViewHideActions: TooltipActions[] = [
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function CmpSwitch({ active, options, onChange }: PropsCmpSwitch) {
+  const i18n = useI18n();
   return (
     <div
       class={classnames(
@@ -101,7 +103,7 @@ function CmpSwitch({ active, options, onChange }: PropsCmpSwitch) {
           )}
           onClick={() => onChange(item.value)}
         >
-          {item.label}
+          {i18n.t(item.label)}
         </div>
       ))}
     </div>
@@ -250,8 +252,10 @@ function PageClient() {
         setFormAddVisible(false);
         break;
       case 's':
-        e.preventDefault();
-        e.metaKey && handleSave();
+        if (e.metaKey) {
+          e.preventDefault();
+          handleSave();
+        }
         break;
       default:
     }
@@ -310,8 +314,8 @@ function PageClient() {
             <CmpSwitch
               active={getView}
               options={[
-                { label: '概览', value: PAAGE_VIEW.OVERVIEW },
-                { label: '修改', value: PAAGE_VIEW.MODIFY },
+                { label: 'CLIENT.OVERVIEW', value: PAAGE_VIEW.OVERVIEW },
+                { label: 'CLIENT.MODIFY', value: PAAGE_VIEW.MODIFY },
               ]}
               onChange={handleSwitchView}
             />

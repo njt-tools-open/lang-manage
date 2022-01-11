@@ -1,6 +1,7 @@
 import { Link } from 'solid-app-router';
 import { createSignal, onMount } from 'solid-js';
 import classnames from 'classnames';
+import { useI18n } from 'solid-i18n';
 import { reqGetAllProjects } from '../../apis';
 import LayoutScroll, {
   LayoutHeaderCenter,
@@ -10,6 +11,7 @@ import styles from './index.module.css';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function PageIndex() {
+  const i18n = useI18n();
   const [getClients, setClients] = createSignal<ProjectModel[]>([]);
   async function getAllProjects() {
     const { code, data } = await reqGetAllProjects();
@@ -34,7 +36,7 @@ function PageIndex() {
                   'dark:wlc-text-white'
                 )}
               >
-                项目列表
+                {i18n.t('HOME.ALL_PROJECTS')}
               </h1>
             </>
           )}

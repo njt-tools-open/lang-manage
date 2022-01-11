@@ -1,4 +1,4 @@
-import { readSettingFile } from '../..';
+import { readSettingFile, setLang } from '../..';
 import { findClientById, saveClientById } from '../../client';
 import { formatToSaveContent, getProjectLangPackages } from '../utils';
 import * as codeMsg from './code_msg';
@@ -16,6 +16,25 @@ router.get('/settings/all_projects', async (ctx: any) => {
     data: {
       clients,
     },
+  };
+});
+
+router.get('/settings/lang/get', async (ctx: any) => {
+  const { lang } = readSettingFile();
+
+  ctx.body = {
+    ...CODE_OK,
+    data: {
+      lang,
+    },
+  };
+});
+
+router.post('/settings/lang/set', async (ctx: any) => {
+  setLang(ctx.request.body.lang);
+  ctx.body = {
+    ...CODE_OK,
+    data: {},
   };
 });
 

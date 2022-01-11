@@ -7,6 +7,7 @@ specifiers:
   classnames: ^2.3.1
   postcss: ^8.4.5
   solid-app-router: ^0.1.14
+  solid-i18n: ^1.0.2
   solid-js: ^1.1.3
   tailwindcss: 2.2.19
   typescript: ^4.4.3
@@ -18,6 +19,7 @@ dependencies:
   axios: 0.24.0
   classnames: 2.3.1
   solid-app-router: 0.1.14_solid-js@1.2.6
+  solid-i18n: 1.0.2_solid-js@1.2.6
   solid-js: 1.2.6
 
 devDependencies:
@@ -1608,6 +1610,13 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
+  /i18n-mini/1.1.0:
+    resolution:
+      {
+        integrity: sha512-Y7R8/ITtjYAAklY9a8vizkFpUlgJDFLGWUlppH7Lcx2R3dXQaZXrugJtGXYjL9vK1ym5CzhbN2kU4lj8ELA6vg==,
+      }
+    dev: false
+
   /import-fresh/3.3.0:
     resolution:
       {
@@ -2175,6 +2184,18 @@ packages:
     peerDependencies:
       solid-js: ^1.0.0
     dependencies:
+      solid-js: 1.2.6
+    dev: false
+
+  /solid-i18n/1.0.2_solid-js@1.2.6:
+    resolution:
+      {
+        integrity: sha512-+WJQLlkB4H/TLr7YcthBcrWdvOL3FMGs+gyJhltcj5Y7lrDRZvGIzw1o/vcO0WiQDEfsvK1mMPu2gqAIs1l8gQ==,
+      }
+    peerDependencies:
+      solid-js: 1.x.x
+    dependencies:
+      i18n-mini: 1.1.0
       solid-js: 1.2.6
     dev: false
 

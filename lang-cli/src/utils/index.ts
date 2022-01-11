@@ -73,9 +73,20 @@ export const getPackage = () =>
     })
   );
 
+/** 获取项目打开 url */
 export const getProjectUrl = (id: number) => {
   const { port } = readSettingFile();
   return `http://localhost:${port}/client/${id}`;
+};
+
+/** 修改 lang */
+export const setLang = (lang: string) => {
+  const pathname = settings.clientsSettingFilename;
+  const content = yaml2json(readFileSync(pathname, { encoding: 'utf8' }));
+
+  content.lang = lang;
+
+  writeFileSync(pathname, json2yaml(content), { encoding: 'utf8' });
 };
 
 /** 添加 client */

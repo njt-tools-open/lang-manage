@@ -1,6 +1,7 @@
 import { mkdirSync, writeFileSync } from 'fs';
 import { spawn } from 'child_process';
-import path = require('path');
+import * as path from 'path';
+import { osLocaleSync } from './os-locale';
 import {
   portIsOccupied,
   readSettingFile,
@@ -13,13 +14,21 @@ import { EvoData, flowsCompose } from './flow-exec';
 import { testConnect } from '../apis';
 import tip from './tip';
 
+const LANGS: string[] = ['zh-CN', 'zh-HK', 'en-US', 'jp-JP'];
+
 /** 创建客户端配置文件默认内容 */
 function getDefaultClientsFileContent() {
   const time = new Date().toLocaleString();
+  let lang: string = osLocaleSync();
+
+  if (!LANGS.includes(lang)) {
+    lang = 'en-US';
+  }
   const content = {
     name: 'lang-manage-clients',
     createTime: time,
     updateTime: time,
+    lang,
     port: 11000,
     clients: [],
   };
