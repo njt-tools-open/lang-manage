@@ -1,6 +1,7 @@
 module.exports = {
   prefix: 'wlc-',
-  pure: ['./src/index.html', './src/**/*.ts', './src/**/*.tsx'],
+  mode: 'jit',
+  content: ['./src/index.html', './src/**/*.{ts,tsx}'],
   darkMode: 'class',
   theme: {
     extend: {},
