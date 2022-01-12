@@ -1,5 +1,5 @@
 {
-  "CLIENT.MODIFY": "",
-  "CLIENT.OVERVIEW": "",
-  "HOME.ALL_PROJECTS": ""
+  "CLIENT.MODIFY": "修改",
+  "CLIENT.OVERVIEW": "概覽",
+  "HOME.ALL_PROJECTS": "項目列表"
 }
