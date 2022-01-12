@@ -4,7 +4,6 @@ import { findClientByName, openClientById } from '../../utils/client';
 import tip from '../../utils/tip';
 
 const open = ({ options }: CommandModel): void => {
-  console.log(options);
   const { name } = options;
 
   if (!name) {

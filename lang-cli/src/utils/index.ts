@@ -3,6 +3,7 @@ import { readFileSync, statSync, writeFileSync } from 'fs';
 import * as net from 'net';
 import * as path from 'path';
 import * as settings from '../constants/settings';
+import { findClientByName } from './client';
 import tip from './tip';
 
 const YAML = require('yaml');
@@ -66,6 +67,12 @@ export const readSettingFile = () =>
     readFileSync(settings.clientsSettingFilename, { encoding: 'utf8' })
   );
 
+export const writeSettingFile = (fileObj: Record<string, any>) => {
+  writeFileSync(settings.clientsSettingFilename, json2yaml(fileObj), {
+    encoding: 'utf8',
+  });
+};
+
 export const getPackage = () =>
   JSON.parse(
     readFileSync(path.join(__dirname, '../../package.json'), {
@@ -98,6 +105,38 @@ export const addClinet = (options: any) => {
   content.clients.sort((current: any, next: any) => current.id - next.id);
 
   writeFileSync(pathname, json2yaml(content), { encoding: 'utf8' });
+};
+
+/** 删除 client */
+export const deleteClient = ({
+  id,
+  name,
+}: {
+  id?: number;
+  name?: string;
+}): void => {
+  if (typeof id === 'undefined' && typeof name === 'undefined') {
+    tip.error('"id" or "name" is must!');
+    return;
+  }
+  const data = readSettingFile();
+  let deleteIndex = -1;
+
+  if (typeof id !== 'undefined') {
+    deleteIndex = data.clients.findIndex((item: any) => item.id === id);
+  } else if (typeof name !== 'undefined') {
+    const client = findClientByName(name);
+    deleteIndex = data.clients.findIndex(
+      (item: any) => item.name === client?.name
+    );
+  }
+
+  if (deleteIndex === -1) {
+    tip.error('Project is not found');
+    return;
+  }
+  data.clients.splice(deleteIndex, 1);
+  writeSettingFile(data);
 };
 
 /** 打开项目管理入口页面 */

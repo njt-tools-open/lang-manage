@@ -4,6 +4,7 @@ import { Command } from 'commander';
 import { COMMANDS } from './constants/commands';
 import test from './commands/test';
 import start from './commands/start';
+import del from './commands/delete';
 import list from './commands/list';
 import stop from './commands/stop';
 import open from './commands/open';
@@ -24,6 +25,11 @@ const commands = [
     command: COMMANDS.START,
     desc: 'Add current folder local file to cache.',
     action: start,
+  },
+  {
+    command: COMMANDS.DELETE,
+    desc: 'Delete project from manager.',
+    action: del,
   },
   {
     command: COMMANDS.LIST,
@@ -54,7 +60,7 @@ const options = [
     desc: "Project's name.",
   },
   {
-    content: '-i, --id',
+    content: '-i, --id <id>',
     // eslint-disable-next-line quotes
     desc: "Project's id.",
   },
@@ -72,8 +78,12 @@ commands.forEach(({ command, desc, action }) => {
     .description(desc)
     .action(() => {
       initialize({ command, useServer: !noNeedStartServer(command) }, () => {
+        const options = program.opts();
+        if (typeof options.id !== undefined) {
+          Object.assign(options, { id: Number(options.id) });
+        }
         action({
-          options: program.opts(),
+          options,
         });
       });
     });

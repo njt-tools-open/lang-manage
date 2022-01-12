@@ -1,20 +1,22 @@
 {
-  "name": "@xv-town/lang-service",
+  "name": "@xv-town/lang-manage",
   "version": "0.0.0",
   "description": "Language packages manager.",
   "author": "xiaoyown <qzy09101018@gmail.com",
   "homepage": "",
   "license": "ISC",
   "bin": {
-    "xv-lang": "bin/index.js"
+    "langm": "bin/index.js"
   },
   "directories": {
     "bin": "bin",
     "test": "__tests__"
   },
   "files": [
-    "bin"
+    "bin",
+    "static"
   ],
+  "preferGlobal": true,
   "publishConfig": {
     "access": "public"
   },
