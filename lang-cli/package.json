@@ -27,10 +27,10 @@
   },
   "dependencies": {
     "@koa/cors": "^3.1.0",
+    "@types/koa-router": "^7.4.4",
     "axios": "^0.24.0",
     "commander": "^8.2.0",
     "cross-env": "^7.0.3",
-    "got": "^12.0.0",
     "koa": "^2.13.1",
     "koa-body": "^4.2.0",
     "koa-logger": "^3.2.1",
@@ -45,7 +45,6 @@
     "yaml": "^1.10.2"
   },
   "devDependencies": {
-    "@types/koa-router": "^7.4.4",
     "@types/node": "^16.9.4",
     "nodemon": "^2.0.12",
     "ts-node": "^10.2.1",
