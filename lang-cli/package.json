@@ -21,6 +21,7 @@
     "access": "public"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "serve:dev": "nodemon",
     "start": "tsc --watch",
     "build": "tsc"
