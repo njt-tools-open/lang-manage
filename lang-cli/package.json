@@ -1,6 +1,6 @@
 {
   "name": "@njt-tools-open/lang-manage",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Language packages manager.",
   "author": "xiaoyown <qzy09101018@gmail.com",
   "homepage": "",
@@ -18,7 +18,8 @@
   ],
   "preferGlobal": true,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",

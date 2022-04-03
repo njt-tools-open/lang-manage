@@ -1,6 +1,6 @@
 {
   "name": "@njt-tools-open/lang-client",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
@@ -12,6 +12,10 @@
     "css:w": "tailwindcss -i ./src/assets/css/tw.css -o ./public/tw.css --watch"
   },
   "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "devDependencies": {
     "autoprefixer": "^10.4.1",
     "postcss": "^8.4.5",

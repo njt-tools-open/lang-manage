@@ -1,5 +1,4 @@
 {
-  "name": "@njt-tools-open/lang-manage",
   "preferGlobal": true,
   "publishConfig": {
     "access": "public"
