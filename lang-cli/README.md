@@ -15,17 +15,23 @@ $ npm install @njt-tools-open/lang-manage
 
 进入到需要维护的语言包目录的上层目录
 
+目录以及文件结构:
+
+![](./assets/folder.png)
+
+执行命令
+
 ```sh
 $ langm start --folder <folder_name> --name <project_name>
 ```
 
 此时会打开当前语言包概览界面
 
-![](./README.md/overview.png)
+![](./assets/overview.png)
 
 可以切换到修改标签下, 进行语言包的修改
 
-![](./README.md/modify.png)
+![](./assets/modify.png)
 
 ## 其他指令
 
@@ -35,7 +41,7 @@ $ langm start --folder <folder_name> --name <project_name>
 $ langm open
 ```
 
-![](./README.md/home.png)
+![](./assets/home.png)
 
 ### 维护列表
 

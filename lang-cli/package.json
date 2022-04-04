@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Language packages manager.",
   "author": "xiaoyown <qzy09101018@gmail.com",
-  "homepage": "",
+  "homepage": "https://github.com/njt-tools-open/lang-manage/tree/master/lang-cli#readme",
   "license": "ISC",
   "bin": {
     "langm": "bin/index.js"
@@ -20,6 +20,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njt-tools-open/lang-manage.git"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
