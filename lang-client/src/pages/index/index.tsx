@@ -1,5 +1,5 @@
 import { Link } from 'solid-app-router';
-import { createSignal, onMount } from 'solid-js';
+import { createSignal, JSXElement, onMount } from 'solid-js';
 import classnames from 'classnames';
 import { useI18n } from 'solid-i18n';
 import { reqGetAllProjects } from '../../apis';
@@ -9,8 +9,7 @@ import LayoutScroll, {
 
 import styles from './index.module.css';
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function PageIndex() {
+function PageIndex(): JSXElement {
   const i18n = useI18n();
   const [getClients, setClients] = createSignal<ProjectModel[]>([]);
   async function getAllProjects() {

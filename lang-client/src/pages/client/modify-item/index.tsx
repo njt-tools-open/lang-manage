@@ -1,5 +1,5 @@
 import classnames from 'classnames';
-import { For, Show } from 'solid-js';
+import { For, JSXElement, Show } from 'solid-js';
 import styles from './index.module.css';
 
 interface PropsModel {
@@ -16,7 +16,6 @@ interface PropsModel {
   onSelect: (key: string) => void;
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 function ModifyItem({
   deleting,
   state,
@@ -24,7 +23,7 @@ function ModifyItem({
   translation,
   onUpdate,
   onSelect,
-}: PropsModel) {
+}: PropsModel): JSXElement {
   const handleChange = (key: string, value: string) => {
     onUpdate({
       name: translation.name,

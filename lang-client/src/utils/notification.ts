@@ -22,8 +22,7 @@ function createNotification(title: string, options: NotificationOptions) {
   };
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function notification(title: string, options: NotificationOptions = {}) {
+function notification(title: string, options: NotificationOptions = {}): void {
   // 先检查浏览器是否支持
   if (!('Notification' in window)) {
     // eslint-disable-next-line no-alert

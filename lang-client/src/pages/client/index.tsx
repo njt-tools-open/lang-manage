@@ -1,6 +1,7 @@
 import {
   createSignal,
   For,
+  JSXElement,
   Match,
   onCleanup,
   onMount,
@@ -71,8 +72,7 @@ const modifyViewHideActions: TooltipActions[] = [
   TooltipActions.SAVE,
 ];
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function CmpSwitch({ active, options, onChange }: PropsCmpSwitch) {
+function CmpSwitch({ active, options, onChange }: PropsCmpSwitch): JSXElement {
   const i18n = useI18n();
   return (
     <div
@@ -121,8 +121,7 @@ interface StateModel {
 
 const defaultFormAdd = () => ({ name: '', data: {} });
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function PageClient() {
+function PageClient(): JSXElement {
   const navigate = useNavigate();
   /** 统一状态存储 */
   const [state, setState] = createStore<StateModel>({ deleteSelectedKeys: [] });

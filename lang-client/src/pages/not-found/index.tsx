@@ -1,5 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-function PageNotFound() {
+import { JSXElement } from 'solid-js';
+
+function PageNotFound(): JSXElement {
   return <section class="section">404</section>;
 }
 

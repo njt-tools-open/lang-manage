@@ -26,7 +26,7 @@ const paint = (name: string, percent: number) => {
       const data = facet?.data as any;
       const color = '#212936';
       // color = '#f0657d';
-      data.push({ type: '缺省', value: 100 - data[0].value });
+      data.push({ type: 'default', value: 100 - data[0].value });
       view.data(data);
       view.coordinate('theta', {
         radius: 0.8,
