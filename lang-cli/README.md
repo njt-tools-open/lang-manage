@@ -17,7 +17,7 @@ $ npm install @njt-tools-open/lang-manage
 
 目录以及文件结构:
 
-![](./assets/folder.png)
+![](https://raw.githubusercontent.com/njt-tools-open/lang-manage/master/lang-cli/assets/folder.png)
 
 执行命令
 
@@ -27,11 +27,11 @@ $ langm start --folder <folder_name> --name <project_name>
 
 此时会打开当前语言包概览界面
 
-![](./assets/overview.png)
+![](https://raw.githubusercontent.com/njt-tools-open/lang-manage/master/lang-cli/assets/overview.png)
 
 可以切换到修改标签下, 进行语言包的修改
 
-![](./assets/modify.png)
+![](https://raw.githubusercontent.com/njt-tools-open/lang-manage/master/lang-cli/assets/modify.png)
 
 ## 其他指令
 
@@ -41,7 +41,7 @@ $ langm start --folder <folder_name> --name <project_name>
 $ langm open
 ```
 
-![](./assets/home.png)
+![](https://raw.githubusercontent.com/njt-tools-open/lang-manage/master/lang-cli/assets/home.png)
 
 ### 维护列表
 
