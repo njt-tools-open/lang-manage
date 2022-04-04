@@ -26,7 +26,6 @@
     "url": "git+https://github.com/njt-tools-open/lang-manage.git"
   },
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "serve:dev": "nodemon",
     "start": "tsc --watch",
     "build": "tsc"
