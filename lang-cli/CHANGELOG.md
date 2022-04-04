@@ -1,5 +1,17 @@
 # @njt-tools-open/lang-manage
 
+## 2.0.3
+
+### Patch Changes
+
+- update assets
+
+## 2.0.2
+
+### Patch Changes
+
+- remove only install by pnpm
+
 ## 2.0.1
 
 ### Patch Changes
