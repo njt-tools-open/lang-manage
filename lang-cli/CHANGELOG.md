@@ -1,5 +1,11 @@
 # @njt-tools-open/lang-manage
 
+## 2.0.5
+
+### Patch Changes
+
+- add package search keyworkds
+
 ## 2.0.4
 
 ### Patch Changes
