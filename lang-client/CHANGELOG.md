@@ -1,5 +1,11 @@
 # @njt-tools-open/lang-client
 
+## 1.0.2
+
+### Patch Changes
+
+- Fix Readme and US lang
+
 ## 1.0.1
 
 ### Patch Changes

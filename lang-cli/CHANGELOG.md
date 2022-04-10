@@ -1,5 +1,11 @@
 # @njt-tools-open/lang-manage
 
+## 2.0.4
+
+### Patch Changes
+
+- Fix Readme and US lang
+
 ## 2.0.3
 
 ### Patch Changes

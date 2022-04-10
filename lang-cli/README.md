@@ -8,7 +8,7 @@ lang-manage 作为一个多语言包的管理小工具, 主要是为了解决多
 
 ```sh
 # or pnpm install or yarn install
-$ npm install @njt-tools-open/lang-manage
+$ npm install @njt-tools-open/lang-manage -g
 ```
 
 ### 启动维护目录
