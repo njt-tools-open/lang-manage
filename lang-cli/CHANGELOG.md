@@ -1,5 +1,11 @@
 # @njt-tools-open/lang-manage
 
+## 2.0.6
+
+### Patch Changes
+
+- Add badge
+
 ## 2.0.5
 
 ### Patch Changes

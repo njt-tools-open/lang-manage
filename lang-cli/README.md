@@ -1,3 +1,23 @@
+<h3>
+  Lang Manager
+<h3>
+
+<br>
+
+<a title="lang-manage Downloads">
+  <img src="https://img.shields.io/npm/dm/%40njt-tools-open%2Flang-manage" alt="Downloads per Month"/>
+</a>
+
+<a title="lang-manage Downloads">
+  <img src="https://img.shields.io/npm/dy/%40njt-tools-open%2Flang-manage" alt="Downloads per Year"/>
+</a>
+
+<a href="https://badge.fury.io/js/%40njt-tools-open%2Flang-manage" title="NPM Version Badge">
+   <img src="https://img.shields.io/npm/v/%40njt-tools-open%2Flang-manage.svg?sanitize=true" alt="version">
+</a>
+
+<br>
+
 ## 简介
 
 lang-manage 作为一个多语言包的管理小工具, 主要是为了解决多语言在不同文件中难以统一管理的问题. 体现在同 key 统一添加/删除, 并且可在同个视图内修改同一 key 的内容, 彻底解决跨文件修改不同语言容易出现缺漏的问题.
