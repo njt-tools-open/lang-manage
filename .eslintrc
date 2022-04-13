@@ -6,7 +6,6 @@
   "extends": [
     "eslint-config-airbnb-base",
     "plugin:@typescript-eslint/recommended",
-    "plugin:react-hooks/recommended",
     "prettier"
   ],
   "globals": {},
@@ -18,7 +17,7 @@
     "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint"],
+  "plugins": ["prettier", "@typescript-eslint"],
   "rules": {
     "prettier/prettier": "error",
     "indent": ["error", 2, { "SwitchCase": 1 }],
@@ -55,14 +54,6 @@
     "linebreak-style": ["error", "unix"],
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react/jsx-wrap-multilines": "off",
-    "react/require-default-props": "off",
-    "react/jsx-filename-extension": "off",
-    "react/jsx-props-no-spreading": "off",
-    "react/destructuring-assignment": "off",
-    "react/jsx-one-expression-per-line": "off",
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-var-requires": "off",
