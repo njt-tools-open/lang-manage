@@ -1,5 +1,11 @@
 # @njt-tools-open/lang-client
 
+## 1.0.3
+
+### Patch Changes
+
+- b8da078: Remove pnpm limit.
+
 ## 1.0.2
 
 ### Patch Changes
