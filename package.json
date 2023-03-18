@@ -7,7 +7,7 @@
     "preinstall": "npx only-allow pnpm",
     "commit": "git-cz",
     "dev:client": "cd lang-client && npm run start",
-    "dev:service": "cd lang-service && npm run dev",
+    "dev:service": "cd lang-cli && npm run serve:dev",
     "lint": "npm run lint:es && npm run lint:prettier",
     "lint:ts": "tsc --project ./tsconfig.json --noEmit",
     "lint:es": "eslint --ext .ts,.tsx ./ --cache --quiet",
